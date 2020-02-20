@@ -18,7 +18,7 @@
       <ul class="site-navigation">
         <li><a href="info.html">Информация</a></li>
         <li><a href="news.html">Новости</a></li>
-        <li><a class="site-navigation-current" href="price.html">Прайс-лист</a></li>
+        <li class="site-navigation-current"><a>Прайс-лист</a></li>
         <li><a href="catalog.html">Магазин</a></li>
         <li><a href="contacts.html">Контакты</a></li>
       </ul>
@@ -32,53 +32,56 @@
 
   <main class="container">
 
-    <h1 class="page-title">Прайс-лист</h1>
-
-    <ul class="breadcrumbs">
-      <li><a href="index.html">Главная</a></li>
-      <li class="breadcrumbs-current">Прайс-лист</li>
-    </ul>
-
-    <p>Истинно мужская классика</p>
-
-    <section>
-      <h2>
-        Мы используем только<br>
-        лучшие средства:
-      </h2>
-      <ul>
-        <li>Baxter of California</li>
-        <li>Mr Natty</li>
-        <li>Suavecito</li>
-        <li>Malin+Goetz</li>
+    <div class="inner-page-container">
+      <h1 class="page-title">Прайс-лист</h1>
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li class="breadcrumbs-current">Прайс-лист</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
-      <h2>
-        Цены на услуги<br>
-        наших мастеров:
-      </h2>
-      <table>
-        <tr>
-          <td>Стрижка</td>
-          <td>1500 &#8381;</td>
-        </tr>
-        <tr>
-          <td>Стрижка бороды</td>
-          <td>500 &#8381;</td>
-        </tr>
-        <tr>
-          <td>Накрутка усов</td>
-          <td>350 &#8381;</td>
-        </tr>
-      </table>
-    </section>
-
-    <section>
-      <h2>Несколько слов о нас:</h2>
-      <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
-      <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
+    <section class="inner-content">
+      <h2 class="big-heading">Истинно мужская классика</h2>
+  
+      <div class="inner-columns">
+        <div class="inner-column-left">
+          <h3>Мы используем только<br>лучшие средства:</h3>
+          <ul class="custom-list-1">
+            <li>Baxter of California</li>
+            <li>Mr Natty</li>
+            <li>Suavecito</li>
+            <li>Malin+Goetz</li>
+          </ul>
+        </div>
+  
+        <div class="inner-column-right">
+          <h3>Цены на услуги наших<br>мастеров:</h3>
+          <table class="custom-table-1">
+            <tr>
+              <td>Стрижка</td>
+              <td>1500 &#8381;</td>
+            </tr>
+            <tr>
+              <td>Стрижка бороды</td>
+              <td>500 &#8381;</td>
+            </tr>
+            <tr>
+              <td>Накрутка усов</td>
+              <td>350 &#8381;</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+  
+      <div class="inner-columns">
+        <h3>Несколько слов о нас:</h3>
+        <div class="inner-column-left">
+          <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
+        </div>
+        <div class="inner-column-right">
+          <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -128,7 +131,7 @@
 
   <section class="modal modal-login">
     <h2>Личный кабинет</h2>
-    <p>Введите свой логин и пароль.</p>
+    <p class="modal-description">Введите свой логин и пароль.</p>
     <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label class="visually-hidden" for="user-login">Логин</label>
@@ -138,16 +141,19 @@
         <label class="visually-hidden" for="user-password">Пароль</label>
         <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="••••••••">
       </p>
-      <p class="login-password-info">
+      <p class="login-help">
         <label class="login-checkbox">
-          <input type="checkbox" name="remember">
+          <input class="visually-hidden" type="checkbox" name="remember">
+          <span class="checkbox-indicator"></span>
           Запомните меня
         </label>
         <a class="restore" href="#">Я забыл пароль!</a>
       </p>
       <button class="button" type="submit">Войти</button>
     </form>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
   </section>
 </body>
 
