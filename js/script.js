@@ -4,8 +4,8 @@ var popup = document.querySelector(".modal-login");
 var close = popup.querySelector(".modal-close");
 
 var form = popup.querySelector('form');
-var email = popup.querySelector("[name=email]");
-var password = popup.querySelector("[name=password]");
+var email = form.querySelector("[name=email]");
+var password = form.querySelector("[name=password]");
 
 var isStorageSupport = true;
 var storage = "";
@@ -18,9 +18,7 @@ try {
 
 link.addEventListener("click", function(ev) {
   ev.preventDefault();
-  
   popup.classList.add("modal-show");
-
   if (storage) {
     email.value = storage;
     password.focus();
@@ -49,8 +47,8 @@ form.addEventListener("submit", function(ev) {
 });
 
 window.addEventListener("keydown", function(ev) {
-  if (ev.keyCode = 27) {
-    ev.preventDefault;
+  if (ev.keyCode == 27) {
+    ev.preventDefault();
     if (popup.classList.contains("modal-show")) {
       popup.classList.remove("modal-show");
       popup.classList.remove("modal-error");
@@ -74,7 +72,7 @@ mapClose.addEventListener("click", function(ev) {
 });
 
 window.addEventListener("keydown", function(ev) {
-  if (ev.keyCode = 27) {
+  if (ev.keyCode == 27) {
     if (mapPopup.classList.contains("modal-show")) {
       ev.preventDefault();
       mapPopup.classList.remove("modal-show");
