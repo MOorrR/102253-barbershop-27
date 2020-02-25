@@ -3,16 +3,17 @@ var link = document.querySelector(".login-link");
 var popup = document.querySelector(".modal-login");
 var close = popup.querySelector(".modal-close");
 
-var form = popup.querySelector('form');
+var form = popup.querySelector("form");
 var email = form.querySelector("[name=email]");
 var password = form.querySelector("[name=password]");
+console.log(email);
 
 var isStorageSupport = true;
 var storage = "";
 
 try {
   storage = localStorage.getItem("email");
-} catch {
+} catch (err) {
   isStorageSupport = false;
 }
 
